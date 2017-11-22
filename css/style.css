@@ -1,0 +1,327 @@
+:root {
+    --active-color: #fff;
+    --section-bg: #040605;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+#landing_page {
+    height: 100vh;
+    width: 100%;
+    background: url("../images/fitness3.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title {
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* Navbar */
+
+.sidebar-nav {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    /* display: none; */
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    background-color: #040605;
+}
+
+@keyframes fadeHalf {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    list-style: none;
+    margin: 0;
+    width: 50%;
+    padding: 10px 10px !important;
+}
+
+.nav-item {
+    border: 1px solid #aaa;
+    padding: 5px !important;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.nav-item:hover {
+    animation: fadeHalf;
+    animation-duration: .5s;
+}
+
+.nav-item a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.nav-item a:hover {
+    opacity: 0.5;
+}
+
+.active {
+    border: 2px solid var(--active-color);
+    width: 100%;
+}
+
+
+/* Page Content */
+.page-content {
+   width: 100%;
+   height: auto;
+
+}
+
+/* Cards */
+.pcard {
+    height: 70vh !important;
+}
+
+.section {
+    margin-left: 20%;
+    height: 100vh;
+    padding: 50px;
+}
+
+.section-title {
+    background-color:var(--section-bg);
+    padding: 15px !important;
+    margin: 0;
+    width: 20%;
+    padding: 0;
+    font-size: 20px !important;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #aaa;
+}
+
+.section-desc {
+    text-align: center;
+    width: 40%;
+}
+
+/* Landing Page */
+
+.landing-text {
+    position: absolute;
+    top: 40%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+#landing_page h2 {
+    text-align: center;
+    color: #fff;
+}
+
+#landing_page p {
+    color: #fff;
+    overflow: auto;
+}
+
+#landing_page a {
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    padding: 15px;
+    color: #fff;
+    background: transparent;
+    transition: opacity 0.5s ease;
+}
+
+#landing_page a:hover {
+    opacity: 0.5;
+}
+
+/* Results Section */
+#results {
+    background: url("../images/fitness4.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+
+/* Packages Section */
+.packages-desc {
+    color: #fff !important;
+}
+
+.package-list {
+    list-style-type: circle !important;
+}
+
+.package-list li {
+    padding: 5px;
+}
+
+
+/* Sign Up Section */
+#sign-up {
+    height: 100vh;
+    background-color: #040605;
+    color: #fff;
+}
+
+#footer {
+    height: 50%;
+    background-color: #040605;
+    color: #fff;
+}
+
+.footer-title {
+    padding: 15px !important;
+    margin: 0;
+    padding: 0;
+    font-size: 20px !important;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #aaa;
+}
+
+.social-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.social-media i {
+    color: #fff;
+}
+
+.social-media i:hover {
+    border-bottom: 2px solid #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        margin-left: 0;
+        height: 100%;
+        padding: 50px;
+    }
+
+    .section-title {
+        width: 100%;
+    }
+
+    .section-desc {
+        width: 100%;
+    }
+
+    .landing-text {
+        margin-left: 0;
+    }
+
+    .sidebar-nav {
+        display: block;
+        width: 100%;
+        height: 150px;
+        z-index: 4;
+    }
+
+    .nav-list {
+        flex-flow: row wrap;
+        width: 100%;
+    }
+
+    .nav-item {
+        flex-basis: 1;
+        width: 15%;
+    }
+
+    .pcard {
+        height: 40vh !important;
+    }
+
+    #sign-up {
+        height: 100vh;
+    }
+
+    #footer {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        margin-left: 0;
+        height: 100%;
+        padding: 50px;
+    }
+
+    .section-title {
+        width: 100%;
+    }
+
+    .section-desc {
+        width: 100%;
+    }
+
+    .landing-text {
+        margin-left: 0;
+    }
+   
+    .sidebar-nav {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-list {
+        flex-flow: row wrap;
+        width: 100%;
+        position: static;
+        padding: 0 !important;
+    }
+
+    .nav-item {
+        width: 30%;
+        margin: 5px;
+        height: 80px;
+        overflow: hidden;
+    }
+
+    .active {
+        padding: 5px !important;
+    }
+
+    #sign-up {
+        height: 100%;
+    }
+
+    #footer {
+        height: 100%;
+    }
+}

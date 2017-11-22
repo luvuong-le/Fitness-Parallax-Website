@@ -10,11 +10,10 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
 
-#landing_page {
+.section-landing {
     height: 100vh;
     width: 100%;
     background: url("../images/fitness3.jpeg");
@@ -62,12 +61,12 @@ nav {
     list-style: none;
     margin: 0;
     width: 50%;
-    padding: 10px 10px !important;
+    padding: 10px 10px;
 }
 
 .nav-item {
     border: 1px solid #aaa;
-    padding: 5px !important;
+    padding: 5px;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -93,6 +92,7 @@ nav {
 .active {
     border: 2px solid var(--active-color);
     width: 100%;
+    padding: 5px !important;
 }
 
 
@@ -119,11 +119,10 @@ nav {
     padding: 15px !important;
     margin: 0;
     width: 20%;
-    padding: 0;
-    font-size: 20px !important;
+    font-size: 20px;
     text-align: center;
     color: #fff;
-    border: 2px solid #aaa;
+    border: 1px solid #aaa;
 }
 
 .section-desc {
@@ -140,17 +139,17 @@ nav {
     text-align: center;
 }
 
-#landing_page h2 {
+.section-landing h2 {
     text-align: center;
     color: #fff;
 }
 
-#landing_page p {
+.section-landing p {
     color: #fff;
     overflow: auto;
 }
 
-#landing_page a {
+.section-landing a {
     text-decoration: none;
     cursor: pointer;
     border: 1px solid #aaa;
@@ -160,12 +159,12 @@ nav {
     transition: opacity 0.5s ease;
 }
 
-#landing_page a:hover {
+.section-landing a:hover {
     opacity: 0.5;
 }
 
 /* Results Section */
-#results {
+.section-results {
     background: url("../images/fitness4.jpeg");
     background-position: center;
     background-size: cover;
@@ -176,11 +175,7 @@ nav {
 
 /* Packages Section */
 .packages-desc {
-    color: #fff !important;
-}
-
-.package-list {
-    list-style-type: circle !important;
+    color: #fff;
 }
 
 .package-list li {
@@ -189,13 +184,13 @@ nav {
 
 
 /* Sign Up Section */
-#sign-up {
+.section-sign-up {
     height: 100vh;
     background-color: #040605;
     color: #fff;
 }
 
-#footer {
+.section-footer {
     height: 50%;
     background-color: #040605;
     color: #fff;
@@ -205,7 +200,7 @@ nav {
     padding: 15px !important;
     margin: 0;
     padding: 0;
-    font-size: 20px !important;
+    font-size: 20px;
     text-align: center;
     color: #fff;
     border: 2px solid #aaa;
@@ -265,11 +260,11 @@ nav {
         height: 40vh !important;
     }
 
-    #sign-up {
+    .section-sign-up {
         height: 100vh;
     }
 
-    #footer {
+    .section-footer {
         height: 100%;
     }
 }
@@ -303,7 +298,7 @@ nav {
         flex-flow: row wrap;
         width: 100%;
         position: static;
-        padding: 0 !important;
+        padding: 0;
     }
 
     .nav-item {
@@ -313,15 +308,11 @@ nav {
         overflow: hidden;
     }
 
-    .active {
-        padding: 5px !important;
-    }
-
-    #sign-up {
+    .section-sign-up {
         height: 100%;
     }
 
-    #footer {
+    .section-footer {
         height: 100%;
-    }
+    }    
 }
